@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <Button android:id="@+id/camera_picture"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Capture from Camera"
+        android:onClick="camera"/>
+
+    <Button android:id="@+id/storage_picture"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Load from Phone Storage"
+        android:onClick="storage"/>
+
+    <Button android:id="@+id/logout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:onClick="logout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgView"
+                android:layout_width="400dp"
+                android:layout_height="373dp"
+                android:layout_gravity="center" />
+
+            <LinearLayout
+                android:id="@+id/emotionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:visibility="gone"> <!-- Initially set to gone -->
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
